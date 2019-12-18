@@ -13,17 +13,19 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import id.ac.polinema.uts.fragment.HitungFragment;
 import id.ac.polinema.uts.fragment.LingkaranFragment;
+import id.ac.polinema.uts.fragment.LingkaranHitungFragment;
 import id.ac.polinema.uts.fragment.RumusFragment;
 import id.ac.polinema.uts.fragment.SegitigaFragment;
 import id.ac.polinema.uts.fragment.SegitigaHitungFragment;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener,
-                                                               RumusFragment.OnFragmentInteractionListener,
-                                                               SegitigaHitungFragment.OnFragmentInteractionListener {
+        RumusFragment.OnFragmentInteractionListener,
+        HitungFragment.OnFragmentInteractionListener {
 
     private SegitigaFragment segitigaFragment;
     private LingkaranFragment lingkaranFragment;
     private SegitigaHitungFragment segitigaHitungFragment;
+    private LingkaranHitungFragment lingkaranHitungFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         segitigaFragment = new SegitigaFragment();
         lingkaranFragment = new LingkaranFragment();
         segitigaHitungFragment = new SegitigaHitungFragment();
+        lingkaranHitungFragment = new LingkaranHitungFragment();
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
@@ -66,23 +69,20 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     public void onSegitigaFragmentonClicked() {
         getSupportFragmentManager().beginTransaction().replace(R.id.container_rumus, segitigaFragment, "SegitigaRumus").commit();
-
     }
 
     @Override
     public void onLingkaranFragmentonClicked() {
         getSupportFragmentManager().beginTransaction().replace(R.id.container_rumus, lingkaranFragment, "LingkaranRumus").commit();
-
     }
 
     @Override
     public void onSegitigaHitungFragmentClicked() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.container_hitung, segitigaHitungFragment).commit();
-
+        getSupportFragmentManager().beginTransaction().replace(R.id.container_hitung, segitigaHitungFragment, "SegitigaHitung").commit();
     }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
+    public void onLingkaranHitungFragmentClicked() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.container_hitung, lingkaranHitungFragment, "SegitigaHitung").commit();
 
     }
 }

@@ -21,8 +21,6 @@ public class HitungFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
     private ImageView segitiga, lingkaran;
 
-
-
     public HitungFragment() {
         // Required empty public constructor
     }
@@ -33,15 +31,14 @@ public class HitungFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_hitung, container, false);
-
-        segitiga = view.findViewById(R.id.fragmentRumus_segitiga);
-        lingkaran = view.findViewById(R.id.fragmentRumus_lingkaran);
+        segitiga = view.findViewById(R.id.fragmentHitung_segitiga);
+        lingkaran = view.findViewById(R.id.fragmentHitung_lingkaran);
 
         segitiga.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(mListener != null) {
-                    mListener.onSegitigaFragmentonClicked();
+                    mListener.onSegitigaHitungFragmentClicked();
                 }
             }
         });
@@ -50,15 +47,29 @@ public class HitungFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if(mListener != null) {
-                    mListener.onLingkaranFragmentonClicked();
+                    mListener.onLingkaranHitungFragmentClicked();
                 }
             }
         });
+
         return view;
     }
 
-    public interface OnFragmentInteractionListener {
-        void onSegitigaFragmentonClicked();
-        void onLingkaranFragmentonClicked();
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof OnFragmentInteractionListener) {
+            mListener = (OnFragmentInteractionListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
     }
+
+    public interface OnFragmentInteractionListener {
+        void onSegitigaHitungFragmentClicked();
+        void onLingkaranHitungFragmentClicked();
+    }
+
+
+
 }

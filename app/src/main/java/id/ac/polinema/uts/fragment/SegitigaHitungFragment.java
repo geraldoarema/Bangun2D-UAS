@@ -1,6 +1,7 @@
 package id.ac.polinema.uts.fragment;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -22,8 +23,6 @@ import id.ac.polinema.uts.R;
  * A simple {@link Fragment} subclass.
  */
 public class SegitigaHitungFragment extends Fragment {
-
-    private OnFragmentInteractionListener mListener;
 
     private EditText inputanA, inputanB, inputanC;
     private Button btnKeliling;
@@ -50,31 +49,12 @@ public class SegitigaHitungFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if(inputanA.getText() != null || inputanB.getText() != null || inputanC.getText() != null){
+
                     hasil.setText(String.valueOf(Float.parseFloat(inputanA.getText().toString())) + (Float.parseFloat(inputanB.getText().toString())) + (Float.parseFloat(inputanC.getText().toString())));
                 }
             }
         });
         return view;
     }
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
-    public interface OnFragmentInteractionListener {
-        void onSegitigaHitungFragmentClicked();
-        void onFragmentInteraction(Uri uri);
-    }
 }
