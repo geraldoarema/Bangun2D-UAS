@@ -63,11 +63,10 @@
 
     <EditText
         android:id="@+id/fragmentSegitigaHitung_inputA"
-        android:layout_width="70dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toStartOf="@+id/guideline15"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
@@ -89,11 +88,10 @@
 
     <EditText
         android:id="@+id/fragmentSegitigaHitung_inputB"
-        android:layout_width="70dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintStart_toStartOf="@+id/guideline16"
@@ -101,11 +99,10 @@
 
     <EditText
         android:id="@+id/fragmentSegitigaHitung_inputC"
-        android:layout_width="70dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/guideline12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline17"
@@ -124,8 +121,9 @@
 
     <TextView
         android:id="@+id/fragmentSegitigaHitung_hasilKelilingText"
-        android:layout_width="100dp"
-        android:layout_height="35dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.17"
@@ -256,11 +254,11 @@
 
     <EditText
         android:id="@+id/editText4"
-        android:layout_width="235dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/guideline21"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline15"
@@ -268,11 +266,11 @@
 
     <EditText
         android:id="@+id/editText5"
-        android:layout_width="235dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/guideline22"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline15"
@@ -298,8 +296,9 @@
 
     <TextView
         android:id="@+id/outputLuas"
-        android:layout_width="100dp"
-        android:layout_height="35dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.17"
